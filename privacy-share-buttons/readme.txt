@@ -16,10 +16,6 @@ they are activated and become the real buttons. This allows to give control to t
 sensible personal information to third-parties sites, and thus providing a nice compromise between privacy and social sharing.
 
 
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
-
-
 == Installation ==
 
 1. Upload `privacy-share-buttons` to the `/wp-content/plugins/` directory
