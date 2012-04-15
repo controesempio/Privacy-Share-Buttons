@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Privacy Share Buttons\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-24 14:31+0100\n"
+"PO-Revision-Date: 2012-02-24 14:53+0100\n"
+"Last-Translator: lucha <lucha@paranoici.org>\n"
+"Language-Team: Autistici/Inventati <lucha@paranoici.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: /Applications/MAMP/htdocs/wordpress/wp-content/plugins/privacy-share-buttons/\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: privacy-share-buttons.php:47
+#: privacy-share-buttons.php:56
+#: privacy-share-buttons.php:65
+#: privacy-share-buttons.php:71
+msgid "Click here to enable the button"
+msgstr "Premi qui per attivare il bottone"
+
+#: privacy-share-buttons.php:86
+msgid "When you activate these buttons by clicking on them, some of your personal data will be transferred to third parties and can be stored by them. For more information click on the <em> i </em>"
+msgstr "Quando attivi i bottoni cliccandoci sopra, alcune tue informazioni personali verranno inviate a terze parti, che potrebbero conservale. Per più informazioni clicca sulla <em> i </em>"
+
+#: privacy-share-buttons.php:89
+msgid "Permanently enable data transfer for:"
+msgstr "Abilita permanentemente i bottoni per:"
+
+#: privacy-share-buttons.php:195
+#: privacy-share-buttons.php:196
+msgid "Privacy Share Buttons"
+msgstr "Privacy Share Buttons"
+
+#: privacy-share-buttons.php:207
+msgid "Enable Social Share Buttons"
+msgstr "Abilita i bottoni"
+
+#: privacy-share-buttons.php:214
+msgid "Display settings"
+msgstr "Impostazioni di visualizzazione"
+
+#: privacy-share-buttons.php:219
+msgid "Display on the Index page"
+msgstr "Mostra sulla pagina principale"
+
+#: privacy-share-buttons.php:226
+msgid "Display on Pages"
+msgstr "Mostra sulla pagine statiche"
+
+#: privacy-share-buttons.php:232
+msgid "Position"
+msgstr "Posizionamento"
+
+#: privacy-share-buttons.php:239
+msgid "Specific Service settings"
+msgstr "Impostazioni specifiche"
+
+#: privacy-share-buttons.php:255
+#, php-format
+msgid "%s username"
+msgstr "Nome utente %s"
+
+#: privacy-share-buttons.php:268
+#: privacy-share-buttons.php:293
+msgid "Enable"
+msgstr "Abilita"
+
+#: privacy-share-buttons.php:274
+msgid "Settings specific to some Social Share services."
+msgstr "Impostazioni specifiche di alcuni servizi di condivisione"
+
+#: privacy-share-buttons.php:278
+msgid "By default buttons will be showed on single Posts"
+msgstr "Di default, i bottoni verranno mostrati sui singoli post"
+
+#: privacy-share-buttons.php:304
+msgid "After the post"
+msgstr "Dopo il post"
+
+#: privacy-share-buttons.php:305
+msgid "Before the post"
+msgstr "Prima del post"
+
+#: privacy-share-buttons.php:306
+msgid "Manual (shortcode)"
+msgstr "Manuale (shortcode)"
+
+#: privacy-share-buttons.php:313
+msgid "If you choose \"Manual (Shortcode)\", you can use the shortcode <strong>[share_buttons]</strong> inside your articles"
+msgstr "Se scegli \"Manuale (shortcode)\", potrai usare lo shortcode <strong>[share_buttons]</strong> dentro i tuoi articoli/post/pagine per posizionare i bottoni"
+
+#: privacy-share-buttons.php:329
+msgid "Settings saved."
+msgstr "Impostazioni salvate"
+
