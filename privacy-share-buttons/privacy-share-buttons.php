@@ -37,8 +37,9 @@ class ShareButton {
 		
 		$this->url = plugins_url(basename(dirname(__FILE__)));
 		$this->css = $this->url .'/css/socialshareprivacy.css';
-		$this->js = $this->url .'/js/jquery.privacysharebuttons.min.js';
+		$this->js = $this->url .'/js/jquery.privacysharebuttons.js';
 		$this->jquery_cookie = $this->url .'/js/jquery.cookie.min.js';
+		$this->jquery_ui_css = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/base/jquery-ui.css';
 		$this->images = $this->url .'/images/';
 		$this->libs = $this->url .'/libs/';
 		$this->services = array(
@@ -83,9 +84,7 @@ class ShareButton {
 			*/
 		);
 		$this->js_conf_default = array(
-			'txt_help' => __('When you activate these buttons by clicking on them, '
-			. 'some of your personal data will be transferred to third parties and can be stored by them. '
-			. 'For more information click on the <em> i </em>','privacy-share-buttons'),
+			'txt_help' => __('When you activate these buttons by clicking on them, some of your personal data will be transferred to third parties and can be stored by them. More information  <em> <a href="https://github.com/controesempio/Privacy-Share-Buttons">	here</a></em>.','privacy-share-buttons'),
 			'settings_perma' => __('Permanently enable data transfer for:','privacy-share-buttons'),
 		);
 		$this->settings = new ShareButtonSettings($this->services);
@@ -112,12 +111,13 @@ class ShareButton {
 	}
 	
 	function enqueue_scripts() {
-		wp_register_script('jquery-cookie',$this->jquery_cookie);
-		wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie'));
+		wp_register_script('jquery-cookie',$this->jquery_cookie,array('jquery'));
+		wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie','jquery-ui-core','jquery-ui-button'));
 		wp_localize_script('social-share-privacy','socialshareprivacy_settings',$this->jsconf());
 	}
 	
 	function enqueue_styles() {
+		wp_enqueue_style('jquery-ui',$this->jquery_ui_css);
 		wp_enqueue_style('privacy-share-buttons',$this->css);
 	}
 	
@@ -164,10 +164,10 @@ class ShareButton {
 				if ($info['jsconf'])
 					$conf['services'][$service] = array_merge($conf['services'][$service],$info['jsconf']);
 			} else {
-				$conf['services'][$service]['status'] = 'off';
+			//	$conf['services'][$service]['status'] = 'off';
 			}
 		}
-		$conf['uri'] = get_permalink();
+//		$conf['uri'] = get_permalink();
 		return $conf;
 	}
 }
