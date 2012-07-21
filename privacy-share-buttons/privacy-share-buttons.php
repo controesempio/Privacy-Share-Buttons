@@ -54,9 +54,8 @@ class ShareButton {
 			),
 		'identica' => array(
 			'name' => 'Identi.ca',
-//			'specific-settings' => true,
-//			'username' => 'reply_to',
-			'lib' => 'identishare.php',
+			'specific-settings' => true,
+			'username' => 'reply_to',
 			'jsconf' => array(
 				'txt_info'	=> __('Click here to enable the button','privacy-share-buttons')
 				
@@ -256,7 +255,7 @@ class ShareButtonSettings {
 	function username_field($id) {
 		$field = $this->settings_section."[$id]";
 		$value = $this->settings[$id];
-		echo "<input type='text' name='{$field}' value='{$value}' size='20' />";
+		echo "@<input type='text' name='{$field}' value='{$value}' size='20' />";
 	}
 
 	function add_default_fields($serviceid, $info) {

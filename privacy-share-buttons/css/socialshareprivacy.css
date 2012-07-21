@@ -16,4 +16,58 @@
 /* Services */
 .social_share_privacy_area li div {width:100px;}
 .social_share_privacy_area .twitter {width:80px;}
-.social_share_privacy_area .facebook {width: 125px;}
+.social_share_privacy_area .facebook {width: 125px; padding-right:10px;}
+.social_share_privacy_area .identica {width:125px;}
+.ui-icon-identica { background-image: url("../images/identica-share-button.png") !important; }
+.ui-icon-identica-dummy { background-image: url("../images/dummy_identica.png") !important; }
+
+.count-o {
+    position: relative;
+    float: right;
+    top: 3px;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #bbb;
+    min-height: 18px;
+    min-width: 15px;
+    max-width: 30px;
+    text-align: center;
+    visibility: visible;
+    -moz-border-radius: 3px; 
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 0 0 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#count {
+    color: #333;
+}
+#count:hover, #count:focus {
+    color: #333;
+    text-decoration: underline;
+}
+.count-o i, .count-o u {
+    border: 4px transparent solid;
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent #aaa transparent -moz-use-text-color;
+    border-style: solid solid solid none;
+    border-width: 4px 4px 4px 0;
+    border-right-color: #aaa;
+    height: 0;
+    left: 0;
+    line-height: 0;
+    margin: -4px 0 0 -4px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+.count-o u {
+	border-right-color: #fff;
+    margin-left: -3px;
+}
