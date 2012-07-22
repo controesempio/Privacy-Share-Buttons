@@ -37,7 +37,7 @@ class ShareButton {
 		
 		$this->url = plugins_url(basename(dirname(__FILE__)));
 		$this->css = $this->url .'/css/socialshareprivacy.css';
-		$this->js = $this->url .'/js/jquery.privacysharebuttons.js';
+		$this->js = $this->url .'/js/jquery.privacysharebuttons.min.js';
 		$this->jquery_cookie = $this->url .'/js/jquery.cookie.min.js';
 		$this->jquery_ui_css = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/base/jquery-ui.css';
 		$this->images = $this->url .'/images/';
