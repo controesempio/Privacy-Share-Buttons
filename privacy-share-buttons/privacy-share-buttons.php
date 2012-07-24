@@ -41,7 +41,6 @@ class ShareButton {
 		$this->jquery_cookie = $this->url .'/js/jquery.cookie.min.js';
 		$this->jquery_ui_css = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/base/jquery-ui.css';
 		$this->images = $this->url .'/images/';
-		$this->libs = $this->url .'/libs/';
 		$this->services = array(
 		'twitter' => array(
 			'name' => 'Twitter',
@@ -158,8 +157,6 @@ class ShareButton {
 				$conf['services'][$service]['dummy_img'] = $this->images.'dummy_'.$service.'.png';
 				if ($info['username'])
 					$conf['services'][$service][$info['username']] = $this->settings[$service.'-username'];
-				if ($info['lib'])
-					$conf['services'][$service][$service.'_lib'] = $this->libs . $info['lib'];
 				if ($info['jsconf'])
 					$conf['services'][$service] = array_merge($conf['services'][$service],$info['jsconf']);
 			} else {
