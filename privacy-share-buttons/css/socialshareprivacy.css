@@ -1,6 +1,6 @@
-.social_share_privacy {width:100%; heigth: 25px;}
-.social_share_privacy_area ul {position:relative; heigth: 25px; }
-.social_share_privacy_area li {float:left; heigth: 25px; list-style-type:none !important; list-style:none !important;}
+.social_share_privacy {width:100%; height: 25px;}
+.social_share_privacy_area ul {position:relative; height: 25px; }
+.social_share_privacy_area li {float:left; height: 25px; list-style-type:none !important; list-style:none !important;}
 .social_share_privacy_area li .dummy_btn {cursor:pointer;}
 
 /* Tooltips */
@@ -55,7 +55,7 @@
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: transparent #aaa transparent -moz-use-text-color;
+    border-color: transparent #aaa transparent;
     border-style: solid solid solid none;
     border-width: 4px 4px 4px 0;
     border-right-color: #aaa;

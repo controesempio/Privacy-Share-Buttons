@@ -37,9 +37,8 @@ class ShareButton {
 		
 		$this->url = plugins_url(basename(dirname(__FILE__)));
 		$this->css = $this->url .'/css/socialshareprivacy.css';
-		$this->js = $this->url .'/js/jquery.privacysharebuttons.min.js';
+		$this->js = $this->url .'/js/jquery.privacysharebuttons.js';
 		$this->jquery_cookie = $this->url .'/js/jquery.cookie.min.js';
-		$this->jquery_ui_css = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/base/jquery-ui.css';
 		$this->images = $this->url .'/images/';
 		$this->services = array(
 		'twitter' => array(
@@ -50,15 +49,6 @@ class ShareButton {
 					'language' => 'en',
 					'txt_info' => __('Click here to enable the button','privacy-share-buttons')
 					),
-			),
-		'identica' => array(
-			'name' => 'Identi.ca',
-			'specific-settings' => true,
-			'username' => 'reply_to',
-			'jsconf' => array(
-				'txt_info'	=> __('Click here to enable the button','privacy-share-buttons')
-				
-				)
 			),
 		'facebook' => array(
 			'name' => 'Facebook',
@@ -109,14 +99,16 @@ class ShareButton {
 	}
 	
 	function enqueue_scripts() {
-		wp_register_script('jquery-cookie',$this->jquery_cookie,array('jquery'));
-		wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie','jquery-ui-core','jquery-ui-button'));
-		wp_localize_script('social-share-privacy','socialshareprivacy_settings',$this->jsconf());
+	  wp_register_script('jquery-cookie',$this->jquery_cookie,array('jquery'),false,true);
+	  wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie','jquery-ui-core','jquery-ui-button'),false,true);
+	  wp_localize_script('social-share-privacy','socialshareprivacy_settings',$this->jsconf());
 	}
 	
 	function enqueue_styles() {
-		wp_enqueue_style('jquery-ui',$this->jquery_ui_css);
-		wp_enqueue_style('privacy-share-buttons',$this->css);
+	  wp_register_style("jquery-ui-core", $this->url . "/jquery-ui/jquery.ui.core.min.css");
+	  wp_register_style("jquery-ui-theme", $this->url . "/jquery-ui/jquery.ui.theme.min.css", array('jquery-ui-core'));
+	  wp_register_style("jquery-ui-button", $this->url . "/jquery-ui/jquery.ui.button.min.css", array('jquery-ui-theme'));
+	  wp_enqueue_style('privacy-share-buttons',$this->css, array('jquery-ui-button'));
 	}
 	
 	function short_code($atts) {
