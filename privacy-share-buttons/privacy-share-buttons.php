@@ -1,11 +1,11 @@
 <?php
 /*
   Plugin Name: Privacy Share Buttons
-  Plugin URI: http://cavallette.noblogs.org
+  Plugin URI: https://github.com/controesempio/Privacy-Share-Buttons
   Description: Enables the well-known "Share this" buttons for different social networks, but with respect toward's your user privacy and data.
-  Version: 0.2
+  Version: 0.3
   Author: lucha <lucha@paranoici.org>
-  Author URI: http://autistici.org
+  Author URI: https://github.com/controesempio/
   Tags: privacy, social, twitter, facebook, googleplus
   License: GPL2
 
