@@ -32,7 +32,7 @@ class ShareButton {
 
     function __construct() {		
 	$this->url = plugins_url(basename(dirname(__FILE__)));
-	$this->css = $this->url .'/css/socialshareprivacy.css';
+	$this->css = '/css/socialshareprivacy.css';
 	$this->js = $this->url .'/js/jquery.socialshareprivacy.min.js';
 	$this->jquery_cookie = $this->url .'/js/jquery.cookie.min.js';
 
@@ -68,7 +68,6 @@ class ShareButton {
 	if (!$activate)
 	    return;
 
-	add_action('wp_enqueue_scripts',array(&$this, 'enqueue_styles'));
 	add_action('wp_footer',array(&$this, 'enqueue_scripts'));
 		
 	add_shortcode('share_buttons',array(&$this,'short_code'));
@@ -79,13 +78,6 @@ class ShareButton {
 	wp_register_script('jquery-cookie',$this->jquery_cookie,array('jquery'),false,true);
 	wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie','jquery-ui-core','jquery-ui-button'),false,true);
 	wp_enqueue_script('ssp', $this->url . '/js/ssp-onload.js',null,false,true);
-	}
-	
-    function enqueue_styles() {
-	wp_register_style("jquery-ui-core", $this->url . "/jquery-ui/jquery.ui.core.min.css");
-	wp_register_style("jquery-ui-theme", $this->url . "/jquery-ui/jquery.ui.theme.min.css", array('jquery-ui-core'));
-	wp_register_style("jquery-ui-button", $this->url . "/jquery-ui/jquery.ui.button.min.css", array('jquery-ui-theme'));
-	wp_enqueue_style('privacy-share-buttons',$this->css, array('jquery-ui-button'));
 	}
 	
     function short_code($atts) {
