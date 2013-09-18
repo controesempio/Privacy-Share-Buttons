@@ -22,11 +22,6 @@ sensible personal information to third-parties sites, and thus providing a nice 
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Go to the configuration page of the plugins to choose which buttons to show (and where)
 
-The buttons rendering could work very badly depending on your theme's CSS. I'm not very good at this, so if you can come up with a nicer way to show the buttons, I'll be glad to include it. If the buttons looks like half hidden on your theme, try adding these lines to your CSS:
-
-.post {overflow: visible;}
-.entry-content {overflow: visible;}
-
 == Changelog ==
 
 = 0.3 =
