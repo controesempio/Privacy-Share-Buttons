@@ -68,7 +68,7 @@ class ShareButton {
 	if (!$activate)
 	    return;
 
-	add_action('wp_footer',array(&$this, 'enqueue_scripts'));
+	add_action('wp_enqueue_scripts',array(&$this, 'enqueue_scripts'));
 		
 	add_shortcode('share_buttons',array(&$this,'short_code'));
 	add_filter('the_content', array(&$this, 'filter_content'), 8);		
@@ -76,7 +76,7 @@ class ShareButton {
 	
     function enqueue_scripts() {
 	wp_register_script('jquery-cookie',$this->jquery_cookie,array('jquery'),false,true);
-	wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie','jquery-ui-core','jquery-ui-button'),false,true);
+	wp_enqueue_script('social-share-privacy',$this->js,array('jquery','jquery-cookie'),false,true);
 	wp_enqueue_script('ssp', $this->url . '/js/ssp-onload.js',null,false,true);
 	}
 	
